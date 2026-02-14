@@ -99,7 +99,7 @@ body{
 .hero{
   position:relative;
   height:700px;
-  background:url('assets/hero.jpg') center/cover no-repeat;
+  background:url('assets/hero.webp') center/cover no-repeat;
   display:flex;
   align-items:center;
   color:white;
