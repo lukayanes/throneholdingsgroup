@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+:root{
+  --green: #0F3D2E;
+  --green-dark: #0A2A20;
+  --gold: #C6A84A;
+  --light: #F6F4ED;
+  --text: #111;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.top-nav{
+  background:white;
+  padding:18px 0;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  height:55px;
+}
+
+.nav-right{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.phone{
+  font-weight:600;
+  color:var(--green);
+  text-decoration:none;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:white;
+  padding:10px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.hero{
+  position:relative;
+  height:600px;
+  background:url('hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  color:white;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(15,61,46,0.75);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.offer-form{
+  display:flex;
+  margin-top:25px;
+}
+
+.offer-form input{
+  padding:15px;
+  width:300px;
+  border:none;
+}
+
+.offer-form button{
+  padding:15px 25px;
+  background:var(--gold);
+  border:none;
+  color:white;
+  font-weight:600;
+}
+
+.section{
+  padding:80px 0;
+}
+
+.section.light{
+  background:var(--light);
+}
+
+.split{
+  display:flex;
+  gap:60px;
+  align-items:center;
+}
+
+.rounded{
+  width:100%;
+  border-radius:8px;
+}
+
+.center{text-align:center}
+
+.steps{
+  display:flex;
+  gap:40px;
+  margin-top:50px;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  flex:1;
+  text-align:center;
+}
+
+.card h3{
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.testimonials{
+  display:flex;
+  gap:30px;
+  margin-top:50px;
+}
+
+.testimonial{
+  background:white;
+  padding:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  flex:1;
+}
+
+.footer{
+  background:var(--green-dark);
+  color:white;
+  padding:40px 0;
+}
+
+.footer-logo{
+  height:60px;
+  margin-bottom:15px;
+}
