@@ -449,14 +449,14 @@ body{
   line-height:1.6;
 }
 
-/* ===============================
-ABOUT HERO (MATCH SUMMIT)
-=============================== */
+/* =========================================
+   ABOUT HERO — SUMMIT MATCH
+========================================= */
 
 .about-hero{
   position:relative;
-  height:260px;
-  background:url("assets/hero.webp") center/cover no-repeat;
+  height:420px;
+  background:url('assets/about-hero.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -465,20 +465,29 @@ ABOUT HERO (MATCH SUMMIT)
 .about-hero .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:rgba(15,61,46,0.65);
+}
+
+.about-hero .center{
+  position:relative;
+  z-index:2;
+  text-align:center;
 }
 
 .about-hero h1{
-  position:relative;
-  color:#fff;
-  font-size:48px;
-  font-weight:700;
-  letter-spacing:2px;
+  font-family:'Playfair Display', serif;
+  font-size:56px;
+  letter-spacing:1px;
+  color:white;
 }
 
-/* ===============================
-ABOUT LAYOUT
-=============================== */
+/* =========================================
+   ABOUT LAYOUT — SUMMIT MATCH
+========================================= */
+
+.section{
+  padding: var(--section-padding) 0;
+}
 
 .about-wrapper{
   display:grid;
@@ -487,58 +496,74 @@ ABOUT LAYOUT
 }
 
 .about-main h2{
-  font-size:48px;
-  margin-bottom:20px;
-}
-
-.about-main h3{
-  font-size:28px;
-  margin-top:50px;
-}
-
-.about-main p{
-  margin-top:18px;
-  font-size:18px;
-  line-height:1.7;
-}
-
-/* ===============================
-SIDEBAR OFFER CARD
-=============================== */
-
-.offer-card{
-  background:#d9e1e6;
-  padding:40px;
-  border-radius:30px;
-  position:sticky;
-  top:120px;
-}
-
-.offer-card h3{
-  font-size:30px;
+  font-family:'Playfair Display', serif;
+  font-size:42px;
   margin-bottom:25px;
 }
 
-.sidebar-form{
+.about-main h3{
+  font-size:26px;
+  font-weight:700;
+  margin-top:40px;
+  margin-bottom:18px;
+}
+
+.about-main p{
+  font-size:18px;
+  color:#333;
+  margin-bottom:22px;
+  line-height:1.8;
+}
+
+/* =========================================
+   SIDEBAR OFFER CARD — SUMMIT MATCH
+========================================= */
+
+.about-sidebar{
+  position:relative;
+}
+
+.offer-card{
+  background:#dfe5e3;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:var(--card-shadow);
+}
+
+.offer-card h3{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.floating-offer-form{
   display:flex;
   gap:10px;
 }
 
-.sidebar-form input{
+.floating-offer-form input{
   flex:1;
-  padding:15px;
-  border-radius:12px;
-  border:none;
+  padding:14px 16px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:16px;
 }
 
-.sidebar-form button{
-  background:#0f4c2f;
-  color:#fff;
+.floating-offer-form button{
+  background:var(--green);
+  color:white;
   border:none;
-  padding:15px 20px;
-  border-radius:12px;
+  padding:14px 18px;
+  border-radius:8px;
+  font-weight:600;
   cursor:pointer;
 }
+
+.floating-offer-form button:hover{
+  background:var(--green-dark);
+}
+
 
 /* ===============================
 RESPONSIVE
