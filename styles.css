@@ -661,17 +661,26 @@ RESPONSIVE
   transition: all 0.35s ease;
 }
 
-/* Sticky mode replaces nav */
 .floating-offer.sticky {
   position: fixed;
-  top: 0;
+  top: 18px;                 /* 🔥 slight drop from top like Summit */
   left: 0;
   width: 100%;
-  padding: 18px 0;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;   /* 🔥 center the card */
   z-index: 2000;
+  background: transparent;   /* remove white full-bleed */
+  box-shadow: none;
 }
+
+/* Card look when sticky */
+.floating-offer.sticky .floating-offer-form {
+  width: 90%;
+  max-width: 1100px;         /* 🔥 wider like Summit */
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
 
 /* Hide nav when sticky */
 .top-nav.hidden {
