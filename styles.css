@@ -586,3 +586,72 @@ RESPONSIVE
 .dropdown-menu.show {
   display: block;
 }
+
+/* ===============================
+   SIDE MENU
+================================ */
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 998;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -10px 0 25px rgba(0,0,0,0.2);
+  transition: 0.35s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu-inner {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.side-menu a {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1d2b38;
+  transition: 0.2s ease;
+}
+
+.side-menu a:hover {
+  color: #2f6fa5;
+}
+
+.close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Active states */
+.side-menu.active {
+  right: 0;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
