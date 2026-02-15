@@ -1083,3 +1083,34 @@ textarea {
   }
 
 }
+
+/* =========================================
+   OFFER COMPLETION PAGE
+========================================= */
+
+.narrow{
+  max-width:750px;
+}
+
+.lead-text{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.address-highlight{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:35px;
+  color:var(--green);
+}
+
+.form-embed{
+  margin-bottom:25px;
+}
+
+.trust-checks{
+  margin-top:15px;
+  font-size:15px;
+  color:#333;
+  line-height:1.9;
+}
