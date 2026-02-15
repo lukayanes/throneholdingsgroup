@@ -131,3 +131,26 @@ document.addEventListener("DOMContentLoaded", function () {
   handleScroll();
 });
 
+// ===============================
+// AUTO-DETECT USER STATE
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const stateEl = document.getElementById("userState");
+  if (!stateEl) return;
+
+  fetch("https://ipapi.co/json/")
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.region) {
+        stateEl.textContent = data.region;
+      }
+    })
+    .catch(() => {
+      // Fail silently, Georgia stays default
+    });
+
+});
+
+
