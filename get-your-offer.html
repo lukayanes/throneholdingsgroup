@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request Your Offer | Throne Holdings Group</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="top-nav">
+  <div class="container nav-inner">
+    <img src="assets/logo.png" class="logo">
+    <div class="nav-right">
+      <a href="tel:8139249450" class="phone">(813) 924-9450</a>
+      <a href="/" class="btn-primary">Get Offer!</a>
+    </div>
+  </div>
+</header>
+
+<section class="section light center">
+
+  <div class="container narrow">
+
+    <h1>Almost there!</h1>
+    <p>Where should we send your offer?</p>
+
+    <form class="lead-form">
+
+      <input type="hidden" id="addressField" name="address">
+
+      <div class="two-col">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="###-###-####" required>
+
+      <div class="consent">
+        <input type="checkbox" required>
+        <span>
+          By checking this box, you agree to our 
+          <a href="/terms-of-use.html">Terms of Use</a> and 
+          <a href="/privacy-policy.html">Privacy Policy</a>.
+          Msg & data rates may apply.
+        </span>
+      </div>
+
+      <button class="btn-primary large-btn">Get My Offer</button>
+
+      <div class="trust-text">
+        ✔ We will not share your information  
+        ✔ We use your phone and email for verification  
+        ✖ If you enter incorrect info, we cannot send an offer.
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const address = params.get("address");
+
+if(address){
+  document.getElementById("addressField").value = decodeURIComponent(address);
+}
+</script>
+
+</body>
+</html>
