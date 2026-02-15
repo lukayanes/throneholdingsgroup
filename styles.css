@@ -1063,3 +1063,23 @@ textarea {
   user-select: text;
 }
 
+@media(max-width:900px){
+
+  .about-wrapper{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .about-hero{
+    height:340px;
+  }
+
+  .about-hero h1{
+    font-size:42px;
+  }
+
+  .about-main h2{
+    font-size:34px;
+  }
+
+}
