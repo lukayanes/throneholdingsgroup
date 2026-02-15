@@ -5,109 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | Throne Holdings Group</title>
 <link rel="stylesheet" href="styles.css">
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3KXMLH92S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P3KXMLH92S');
+</script>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+HEADER
+========================= -->
 <header class="top-nav">
   <div class="container nav-inner">
-    <img src="assets/logo.png" class="logo">
+    <a href="index.html">
+      <img src="assets/throne logo.png" class="logo" alt="Throne Holdings Group">
+    </a>
+
     <div class="nav-right">
-      <a href="tel:8139249450" class="phone">(813) 924-9450</a>
-      <a href="/" class="btn-primary">Get Offer!</a>
+      <a href="tel:9134814221" class="phone">(913) 481-4221</a>
+      <a href="get-offer.html" class="btn-primary">Get Offer!</a>
+      <div class="hamburger" onclick="openMenu()">☰</div>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero small-hero">
+<!-- Slide Menu -->
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu-inner">
+    <div class="close-btn" onclick="closeMenu()">✕</div>
+    <a href="index.html">Home</a>
+    <a href="get-offer.html">Get Offer</a>
+    <a href="about.html">About-Us</a>
+  </div>
+</div>
+
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
+<!-- =========================
+HERO
+========================= -->
+<section class="about-hero">
   <div class="overlay"></div>
-  <div class="container hero-inner">
+  <div class="container center">
     <h1>PRIVACY POLICY</h1>
   </div>
 </section>
 
-<!-- CONTENT -->
+<!-- =========================
+PRIVACY CONTENT
+========================= -->
 <section class="section">
   <div class="container legal">
 
-    <h2>Throne Holdings Group, LLC — Online Privacy Policy</h2>
+    <h2>Privacy Policy</h2>
     <p><strong>Effective Date:</strong> January 1, 2026</p>
 
-    <h3>Introduction</h3>
-    <p>
-      Throne Holdings Group, LLC ("Company," "we," "our," or "us") respects your privacy and is committed to protecting it through this Privacy Policy.
-      This policy describes how we collect, use, and safeguard your information when you visit our website.
-    </p>
-
     <h3>Information We Collect</h3>
-    <ul>
-      <li>Name, email address, and phone number</li>
-      <li>Property address and related real estate details</li>
-      <li>Communication history</li>
-      <li>Website usage data (cookies, analytics)</li>
-    </ul>
+    <p>
+      When you use our website or submit your information, we may collect personal
+      information such as your name, phone number, email address, and property address.
+      We may also collect technical data such as IP address, browser type,
+      and interaction data through cookies and analytics tools.
+    </p>
 
     <h3>How We Use Your Information</h3>
-    <p>We use collected information to:</p>
-    <ul>
-      <li>Provide cash offer services</li>
-      <li>Communicate regarding property inquiries</li>
-      <li>Improve our website and services</li>
-      <li>Comply with legal obligations</li>
-    </ul>
-
-    <h3>Information Sharing</h3>
     <p>
-      We do not sell personal information. We may share information with service providers,
-      title companies, contractors, or legal advisors when necessary to facilitate transactions.
+      We use your information to evaluate your property, communicate with you,
+      provide offers, improve our services, and respond to inquiries.
+      Your information may also be used for marketing purposes,
+      including phone calls, emails, and text messages related to your request.
     </p>
 
-    <h3>Cookies and Tracking</h3>
+    <h3>SMS & Communication Consent</h3>
     <p>
-      We may use cookies and tracking tools such as Google Analytics and Meta Pixel
-      to analyze traffic and improve marketing performance.
+      By submitting your phone number through our website, you consent to receive
+      calls and text messages from Throne Holdings Group, LLC regarding your property
+      and related services. Message and data rates may apply.
+      You may opt out at any time by replying STOP to any text message.
+    </p>
+
+    <h3>Sharing of Information</h3>
+    <p>
+      We do not sell your personal information.
+      We may share information with service providers or business partners
+      strictly for the purpose of evaluating properties or completing transactions.
+    </p>
+
+    <h3>Cookies & Tracking Technologies</h3>
+    <p>
+      Our website uses cookies and tracking technologies,
+      including Google Analytics and advertising tools,
+      to analyze website traffic and improve user experience.
+      You may disable cookies through your browser settings.
     </p>
 
     <h3>Data Security</h3>
     <p>
-      We implement commercially reasonable safeguards to protect your personal data.
+      We implement reasonable security measures to protect your information.
+      However, no online transmission can be guaranteed 100% secure.
     </p>
 
     <h3>Your Rights</h3>
     <p>
-      You may request access, correction, or deletion of your personal information by contacting us.
+      You may request access to, correction of, or deletion of your personal information
+      by contacting us directly.
     </p>
 
     <h3>Contact Information</h3>
     <p>
       Throne Holdings Group, LLC<br>
-      Email: info@throneholdingsgroup.com<br>
-      Phone: (813) 924-9450
+      info@throneholdingsgroup.com<br>
+      (913) 481-4221
     </p>
 
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- =========================
+FOOTER
+========================= -->
 <footer class="footer">
   <div class="container footer-grid">
+
     <div>
-      <img src="assets/logo.png" class="footer-logo">
+      <a href="#top">
+        <img src="assets/throne logo.png" class="footer-logo" alt="Throne Holdings Group">
+      </a>
     </div>
+
     <div>
-      <h4>Quick Links</h4>
-      <a href="/privacy-policy.html">Privacy Policy</a><br>
-      <a href="/terms-of-use.html">Terms of Use</a>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
+
     <div>
-      <h4>Contact</h4>
-      <p>(813) 924-9450</p>
-      <p>info@throneholdingsgroup.com</p>
+      <h4>Contact Us</h4>
+      <a href="tel:9134814221">(913) 481-4221</a>
+      <a href="mailto:info@throneholdingsgroup.com">
+        info@throneholdingsgroup.com
+      </a>
     </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Throne Holdings Group. All Rights Reserved.
   </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
