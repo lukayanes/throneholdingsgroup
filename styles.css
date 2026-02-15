@@ -655,3 +655,17 @@ RESPONSIVE
   opacity: 1;
   visibility: visible;
 }
+
+/* ===============================
+   FLOATING ADDRESS BAR
+================================ */
+
+.address-bar-wrapper {
+  position: sticky;
+  top: 100px; /* adjust to match your nav height */
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
