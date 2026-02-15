@@ -99,3 +99,29 @@ function closeMenu() {
   document.getElementById("menuOverlay").classList.remove("active");
 }
 
+// ===============================
+// FLOATING OFFER SCROLL TRIGGER
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const floatingBar = document.getElementById("floatingOffer");
+  const hero = document.querySelector(".hero");
+
+  if (!floatingBar || !hero) return;
+
+  function checkScroll() {
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const scrollY = window.scrollY;
+
+    if (scrollY > heroBottom - 120) {
+      floatingBar.classList.add("fixed");
+    } else {
+      floatingBar.classList.remove("fixed");
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll(); // run once on load
+});
+
