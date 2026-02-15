@@ -1251,3 +1251,19 @@ textarea {
 .pac-container::-webkit-scrollbar-track{
   background:#f0f0f0;
 }
+
+/* =========================================
+   FAQ TEXT COLOR FIX (MOBILE)
+========================================= */
+
+@media(max-width:768px){
+
+  .faq-question{
+    color: var(--green) !important;
+  }
+
+  .faq-icon{
+    color: var(--green) !important;
+  }
+
+}
