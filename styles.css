@@ -831,3 +831,77 @@ html {
   transform:rotate(45deg);
 }
 
+/* ===============================
+   DARK CTA HERO
+================================ */
+
+.cta-hero {
+  position: relative;
+  background: url('assets/hero.webp') center/cover no-repeat;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10,42,32,0.85),
+    rgba(10,42,32,0.75)
+  );
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cta-logo {
+  width: 220px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.cta-text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cta-list li {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.before-after img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.section.light .lead {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.section.light .btn-primary {
+  margin-top: 30px;
+}
+
