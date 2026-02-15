@@ -17,35 +17,36 @@
 </head>
 <body>
 
-<!-- =========================
-HEADER
-========================= -->
 <header class="top-nav">
   <div class="container nav-inner">
     
     <a href="index.html">
-      <img src="assets/throne logo.png" class="logo" alt="Throne Holdings Group Logo">
+      <img src="assets/throne logo.png" class="logo" alt="Throne Holdings Group">
     </a>
 
     <div class="nav-right">
       <a href="tel:9134814221" class="phone">(913) 481-4221</a>
-      
-      <!-- Button now links to NEW page -->
       <a href="get-offer.html" class="btn-primary">Get Offer!</a>
 
-      <!-- Hamburger -->
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-      <!-- Dropdown -->
-      <div id="dropdownMenu" class="dropdown-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="get-offer.html">Get Offer</a>
-      </div>
+      <div class="hamburger" onclick="openMenu()">☰</div>
     </div>
-
   </div>
 </header>
+
+<!-- Slide Menu -->
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu-inner">
+    <div class="close-btn" onclick="closeMenu()">✕</div>
+
+    <a href="index.html">Home</a>
+    <a href="get-offer.html">Get Offer</a>
+    <a href="about.html">About-Us</a>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
 
 
 <!-- =========================
