@@ -93,84 +93,74 @@ body{
 }
 
 /* =========================================
-   HERO
+   HERO (MATCH FIX 4)
 ========================================= */
 
-.hero{
-  position:relative;
-  height:700px;
-  background:url('assets/hero.webp') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  color:white;
+.hero {
+  position: relative;
+  height: 700px;
+  background: url('assets/hero.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;   /* Force left align */
 }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-      rgba(15,61,46,0.85),
-      rgba(15,61,46,0.75)
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.55)
   );
 }
 
-.hero-inner{
-  position:relative;
-  z-index:2;
-  max-width:800px;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
 }
 
-.hero h4{
-  font-weight:500;
-  margin-bottom:18px;
-  opacity:.9;
+/* Top Blip */
+.hero h4 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
 }
 
-.hero h1{
-  font-family:'Playfair Display', serif;
-  font-size:52px;
-  line-height:1.1;
-  margin-bottom:22px;
+/* Main Headline */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 700;
+  margin-bottom: 26px;
 }
 
-.hero p{
-  font-size:18px;
-  margin-bottom:35px;
-  opacity:.95;
+/* Gold Highlight */
+.hero h1 .gold {
+  color: var(--gold);
 }
 
-/* Hero Form */
-
-.hero-form{
-  display:flex;
-  background:white;
-  border-radius:60px;
-  overflow:hidden;
-  box-shadow:var(--card-shadow);
-  max-width:650px;
+/* Supporting Paragraph */
+.hero p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-bottom: 40px;
 }
 
-.hero-form input{
-  flex:1;
-  padding:18px 25px;
-  border:none;
-  font-size:16px;
-  outline:none;
+/* Address Bar inside Hero */
+.floating-offer {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }
 
-.hero-form button{
-  background:var(--gold);
-  border:none;
-  padding:18px 35px;
-  font-weight:600;
-  color:white;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.hero-form button:hover{
-  background:var(--gold-dark);
-}
 
 /* =========================================
    SECTIONS
