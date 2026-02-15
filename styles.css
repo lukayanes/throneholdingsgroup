@@ -92,10 +92,6 @@ body{
   cursor:pointer;
 }
 
-/* =========================================
-   HERO (MATCH FIX 4)
-========================================= */
-
 .hero {
   position: relative;
   height: 700px;
@@ -103,7 +99,7 @@ body{
   display: flex;
   align-items: center;
   color: white;
-  text-align: left;   /* Force left align */
+  text-align: left;
 }
 
 .overlay {
@@ -121,44 +117,33 @@ body{
   max-width: 760px;
 }
 
-/* Top Blip */
+/* Top blip */
 .hero h4 {
-  font-weight: 700;
   font-size: 20px;
-  letter-spacing: 0.5px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-/* Main Headline */
+/* Headline */
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1.05;
   font-weight: 700;
   margin-bottom: 26px;
 }
 
-/* Gold Highlight */
+/* Gold highlight */
 .hero h1 .gold {
   color: var(--gold);
 }
 
-/* Supporting Paragraph */
+/* Supporting paragraph */
 .hero p {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.6;
   max-width: 650px;
-  margin-bottom: 40px;
-}
-
-/* Address Bar inside Hero */
-.floating-offer {
-  position: absolute;
-  bottom: 120px;
-  left: 0;
-  right: 0;
-  z-index: 5;
 }
 
 
