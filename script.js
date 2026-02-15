@@ -50,3 +50,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+/* ===============================
+   HAMBURGER DROPDOWN (ALL PAGES)
+================================ */
+function toggleMenu() {
+  const menu = document.getElementById("dropdownMenu");
+  if (menu) menu.classList.toggle("show");
+}
+
+/* ===============================
+   GET OFFER PAGE LOGIC
+================================ */
+document.addEventListener("DOMContentLoaded", function () {
+
+  const offerForm = document.getElementById("offerPageForm");
+  const offerBtn = document.getElementById("offerPageBtn");
+  const offerInput = document.getElementById("offerAddress");
+
+  if (offerForm && offerBtn && offerInput) {
+
+    offerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const address = offerInput.value.trim();
+      if (!address) return;
+
+      offerBtn.innerText = "Requesting...";
+      offerBtn.disabled = true;
+
+      setTimeout(() => {
+        window.location.href =
+          "get-your-offer.html?address=" +
+          encodeURIComponent(address);
+      }, 800);
+    });
+  }
+
+});
+
