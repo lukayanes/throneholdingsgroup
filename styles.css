@@ -560,3 +560,29 @@ RESPONSIVE
   }
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #111;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
