@@ -452,3 +452,111 @@ body{
   font-size:14px;
   line-height:1.6;
 }
+
+/* ===============================
+ABOUT HERO (MATCH SUMMIT)
+=============================== */
+
+.about-hero{
+  position:relative;
+  height:260px;
+  background:url("house.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.about-hero .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+.about-hero h1{
+  position:relative;
+  color:#fff;
+  font-size:48px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* ===============================
+ABOUT LAYOUT
+=============================== */
+
+.about-wrapper{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:80px;
+}
+
+.about-main h2{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.about-main h3{
+  font-size:28px;
+  margin-top:50px;
+}
+
+.about-main p{
+  margin-top:18px;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* ===============================
+SIDEBAR OFFER CARD
+=============================== */
+
+.offer-card{
+  background:#d9e1e6;
+  padding:40px;
+  border-radius:30px;
+  position:sticky;
+  top:120px;
+}
+
+.offer-card h3{
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.sidebar-form{
+  display:flex;
+  gap:10px;
+}
+
+.sidebar-form input{
+  flex:1;
+  padding:15px;
+  border-radius:12px;
+  border:none;
+}
+
+.sidebar-form button{
+  background:#0f4c2f;
+  color:#fff;
+  border:none;
+  padding:15px 20px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ===============================
+RESPONSIVE
+=============================== */
+
+@media(max-width:1000px){
+  .about-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .offer-card{
+    position:relative;
+    top:0;
+    margin-top:40px;
+  }
+}
+
