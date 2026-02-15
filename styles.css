@@ -1123,3 +1123,69 @@ textarea {
   color:#c62828;
   font-weight:600;
 }
+
+/* =========================================
+   MOBILE FIXES (<= 768px)
+========================================= */
+
+@media(max-width:768px){
+
+  /* NAV BAR FIX */
+  .top-nav{
+    padding:12px 0;
+  }
+
+  .nav-inner{
+    gap:10px;
+  }
+
+  .logo{
+    height:55px; /* smaller for mobile */
+  }
+
+  .phone{
+    font-size:14px;
+  }
+
+  .btn-primary{
+    padding:10px 16px;
+    font-size:14px;
+    border-radius:20px;
+  }
+
+  /* HERO TEXT FIX */
+  .hero{
+    padding-top:40px;
+  }
+
+  .hero-inner h1{
+    font-size:36px;
+    line-height:1.15;
+  }
+
+  .hero-inner h4{
+    font-size:16px;
+  }
+
+  .hero-inner p{
+    font-size:16px;
+  }
+
+  /* ADDRESS BAR FIX */
+  .floating-offer-form{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .floating-offer-form input{
+    width:100%;
+    padding:16px;
+    font-size:16px;
+  }
+
+  .floating-offer-form button{
+    width:100%;
+    padding:14px;
+  }
+
+}
