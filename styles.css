@@ -832,23 +832,24 @@ html {
 }
 
 /* ===============================
-   DARK CTA HERO
+   DARK CTA STRIP (THINNER)
 ================================ */
 
 .cta-hero {
   position: relative;
   background: url('assets/hero.webp') center/cover no-repeat;
-  padding: 100px 0;
+  padding: 45px 0; /* much thinner */
   color: white;
-  text-align: center;
 }
 
 .cta-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(10,42,32,0.85),
-    rgba(10,42,32,0.75)
+    90deg,
+    rgba(10,42,32,0.90) 0%,
+    rgba(10,42,32,0.80) 50%,
+    rgba(10,42,32,0.65) 100%
   );
 }
 
@@ -856,52 +857,51 @@ html {
   position: relative;
   z-index: 2;
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .cta-logo {
-  width: 220px;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  height: 130px;   /* larger logo */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cta-text {
+  flex: 1;
+  text-align: right;
 }
 
 .cta-text h2 {
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .cta-text p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.cta-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cta-list li {
-  margin: 10px 0;
   font-size: 18px;
-  font-weight: 600;
+  margin: 0;
+  opacity: 0.95;
 }
 
-.before-after img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-}
+/* Responsive */
 
-.section.light .lead {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 20px 0;
-}
+@media (max-width: 900px) {
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
 
-.section.light .btn-primary {
-  margin-top: 30px;
-}
+  .cta-text {
+    text-align: center;
+  }
 
+  .cta-logo {
+    height: 90px;
+  }
+}
