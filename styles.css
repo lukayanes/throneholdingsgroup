@@ -456,7 +456,7 @@ ABOUT HERO (MATCH SUMMIT)
 .about-hero{
   position:relative;
   height:260px;
-  background:url("house.jpg") center/cover no-repeat;
+  background:url("assets/hero.webp") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
