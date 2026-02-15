@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Offer | Throne Holdings Group</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="container nav-inner">
+    <a href="index.html">
+      <img src="assets/throne logo.png" class="logo">
+    </a>
+    <div class="nav-right">
+      <a href="tel:9134814221" class="phone">(913) 481-4221</a>
+      <a href="get-offer.html" class="btn-primary">Get Offer!</a>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </div>
+
+  <div id="dropdownMenu" class="dropdown-menu">
+    <a href="about.html">About</a>
+    <a href="get-offer.html">Get Offer</a>
+  </div>
+</header>
+
+<section class="hero offer-hero">
+  <div class="overlay"></div>
+  <div class="container hero-inner">
+    <h4>No Repairs, No Showings, No Cleaning, No Stress</h4>
+    <h1>LET’S GET STARTED</h1>
+
+    <form id="offerPageForm" class="hero-form">
+      <input id="offerAddress" type="text" placeholder="Home Address Here..." required />
+      <button id="offerPageBtn" type="submit">Get Offer!</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/throne logo.png" class="footer-logo">
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p><a href="terms.html">Terms Of Use</a></p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>(913) 481-4221</p>
+      <p>info@throneholdingsgroup.com</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+document.getElementById("offerPageForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("offerPageBtn");
+  const address = document.getElementById("offerAddress").value;
+
+  btn.innerText = "Requesting...";
+  btn.disabled = true;
+
+  setTimeout(() => {
+    window.location.href = "get-your-offer.html?address=" + encodeURIComponent(address);
+  }, 800);
+});
+</script>
+
+</body>
+</html>
