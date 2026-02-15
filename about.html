@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Us | Throne Holdings Group</title>
 <link rel="stylesheet" href="styles.css">
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3KXMLH92S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P3KXMLH92S');
+</script>
 </head>
 
 <body>
@@ -14,29 +23,48 @@ HEADER
 ========================= -->
 <header class="top-nav">
   <div class="container nav-inner">
+    
     <a href="index.html">
-      <img src="assets/throne logo.png" class="logo">
+      <img src="assets/throne logo.png" class="logo" alt="Throne Holdings Group">
     </a>
+
     <div class="nav-right">
       <a href="tel:9134814221" class="phone">(913) 481-4221</a>
-      <a href="index.html" class="btn-primary">Get Offer!</a>
-      <div class="hamburger">☰</div>
+      <a href="get-offer.html" class="btn-primary">Get Offer!</a>
+      <div class="hamburger" onclick="openMenu()">☰</div>
     </div>
   </div>
 </header>
 
+<!-- Slide Menu -->
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu-inner">
+    <div class="close-btn" onclick="closeMenu()">✕</div>
+    <a href="index.html">Home</a>
+    <a href="get-offer.html">Get Offer</a>
+    <a href="about.html">About Us</a>
+  </div>
+</div>
+
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
 <!-- =========================
-ABOUT HERO (EXACT MATCH)
+ABOUT HERO
 ========================= -->
-<section class="about-hero">
+<section class="hero" id="top">
   <div class="overlay"></div>
-  <div class="container center">
-    <h1>ABOUT-US</h1>
+
+  <div class="container hero-inner">
+    <h1>About Throne Holdings Group</h1>
+    <p>
+      We provide homeowners with fast, fair cash offers —
+      without repairs, showings, or commissions.
+    </p>
   </div>
 </section>
 
 <!-- =========================
-MAIN ABOUT SECTION
+MAIN ABOUT CONTENT
 ========================= -->
 <section class="section">
   <div class="container about-wrapper">
@@ -44,80 +72,41 @@ MAIN ABOUT SECTION
     <!-- LEFT CONTENT -->
     <div class="about-main">
 
-      <h2>About Throne Holdings Group</h2>
-
-      <h3>Who Are We?</h3>
+      <h2>Who Are We?</h2>
 
       <p>
-        We buy houses. In as little as one phone call, you can receive a quick
-        cash offer from us. We aren’t real estate agents — we are direct cash
-        home buyers.
+        Throne Holdings Group is a direct cash home buyer. We are not real estate agents and we do not list properties. Instead, we purchase homes directly from homeowners who want a faster, simpler solution. Our goal is to offer a fair price in a quick and hassle-free manner, eliminating the stress that often comes with traditional home sales.
       </p>
 
+      <h2>What We Do</h2>
+
       <p>
-        The goal of a cash home buyer is to offer homeowners a fair price for
-        their home in a quick and hassle-free manner.
+        We buy houses in any condition. No repairs, no cleaning, no staging, and no open houses. Whether you’re facing foreclosure, divorce, inherited property, relocation, or simply want to avoid months of uncertainty, we provide a clear and straightforward process. In many cases, we can present an offer within 24 hours and close in as little as seven days.
       </p>
 
-      <p>
-        We are able to accomplish this through an efficient, streamlined
-        home-selling process. In just three easy steps, you can enjoy more money,
-        less hassle, and accomplish your goals in less time.
-      </p>
-
-      <h3>Cash Home Buyers Nationwide!</h3>
+      <h2>Why Homeowners Choose Us</h2>
 
       <p>
-        As a cash home buyer, we are dedicated to helping homeowners who need to
-        sell their houses fast and hassle-free.
-      </p>
-
-      <p>
-        We understand that selling a house can be a stressful and
-        time-consuming process, which is why we’re prepared to offer you a fast
-        and fair solution.
-      </p>
-
-      <p>
-        Whether you’re facing foreclosure, divorce, inherited property,
-        or simply need to sell your house quickly for any reason,
-        we’re here to help.
-      </p>
-
-      <h3>Why We Are The Best Home Buyer In The Nation</h3>
-
-      <p>
-        It’s simple: we are able to offer a better price for each homeowner we
-        work with.
-      </p>
-
-      <p>
-        It all starts with a single phone call. You call our office, give your
-        contact information, and we will arrange a convenient time to meet.
-      </p>
-
-      <p>
-        We will evaluate your home and make you an offer within 24 hours.
-        You can then close at your earliest convenience.
-      </p>
-
-      <p>
-        If you want to sell your house within one week, we can do that.
-        Or, if you want to take your time, we will work with your schedule.
+        It starts with a simple conversation. After evaluating your property, we present a written cash offer and allow you to choose your closing date. There are no commissions, no hidden fees, and no financing delays. Just a streamlined process designed to help you move forward quickly and confidently.
       </p>
 
     </div>
 
-    <!-- RIGHT SIDEBAR OFFER CARD -->
+    <!-- RIGHT SIDEBAR -->
     <div class="about-sidebar">
 
       <div class="offer-card">
-
         <h3>Get An Offer!</h3>
 
-        <form class="sidebar-form">
-          <input type="text" placeholder="Home Address Here..." required>
-          <button type="submit">Get Offer!</button>
+        <!-- MATCHES INDEX EXACTLY -->
+        <form id="addressForm" class="floating-offer-form">
+          <input 
+            id="autocomplete"
+            type="text"
+            placeholder="Home Address Here..."
+            required
+          />
+          <button id="offerBtn" type="submit">Get Offer!</button>
         </form>
 
       </div>
@@ -128,29 +117,41 @@ MAIN ABOUT SECTION
 </section>
 
 <!-- =========================
-FOOTER (EXACT STRUCTURE)
+FOOTER
 ========================= -->
 <footer class="footer">
   <div class="container footer-grid">
 
     <div>
-      <img src="assets/throne logo.png" class="footer-logo">
+      <a href="#top">
+        <img src="assets/throne logo.png" class="footer-logo" alt="Throne Holdings Group">
+      </a>
     </div>
 
     <div>
-      <h4>Quick Links</h4>
-      <p><a href="privacy.html">Privacy Policy</a></p>
-      <p><a href="terms.html">Terms Of Use</a></p>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
 
     <div>
       <h4>Contact Us</h4>
-      <p>(913) 481-4221</p>
-      <p>info@throneholdingsgroup.com</p>
+      <a href="tel:9134814221">(913) 481-4221</a>
+      <a href="mailto:info@throneholdingsgroup.com">
+        info@throneholdingsgroup.com
+      </a>
     </div>
 
   </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Throne Holdings Group. All Rights Reserved.
+  </div>
 </footer>
+
+<!-- MATCH INDEX SCRIPTS EXACTLY -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6XJI1xljjB84anf_s7GMsBqs_03HwdE&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="script.js"></script>
 
 </body>
 </html>
