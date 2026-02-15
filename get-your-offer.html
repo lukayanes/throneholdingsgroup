@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Complete Your Offer | Throne Holdings Group</title>
 <link rel="stylesheet" href="styles.css">
-
-<!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3KXMLH92S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P3KXMLH92S');
-</script>
 </head>
 
 <body>
@@ -62,41 +53,40 @@ OFFER COMPLETION SECTION
 
     <h3 id="displayAddress" class="address-highlight"></h3>
 
-    <form class="lead-form">
+    <!-- Hidden Address Field -->
+    <input type="hidden" id="addressField" name="address">
 
-      <!-- Hidden Address -->
-      <input type="hidden" id="addressField" name="address">
+    <!-- =========================
+    INLINE CRM FORM
+    ========================== -->
+    <div class="form-embed">
 
-      <div class="two-col">
-        <input type="text" name="firstName" placeholder="First Name" required>
-        <input type="text" name="lastName" placeholder="Last Name" required>
-      </div>
+      <iframe
+        src="https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh"
+        style="width:100%;height:855px;border:none;border-radius:10px"
+        id="inline-Lga5q77f3hPlvKTEDdBh" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-activation-type="alwaysActivated"
+        data-deactivation-type="neverDeactivate"
+        data-form-name="PPC / Website"
+        data-height="855"
+        data-layout-iframe-id="inline-Lga5q77f3hPlvKTEDdBh"
+        data-form-id="Lga5q77f3hPlvKTEDdBh"
+        title="PPC / Website">
+      </iframe>
 
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
 
-      <div class="consent">
-        <input type="checkbox" required>
-        <span>
-          By submitting this form, you agree to our 
-          <a href="terms.html">Terms of Use</a> and 
-          <a href="privacy.html">Privacy Policy</a>.  
-          You consent to receive calls and text messages regarding your property.  
-          Message & data rates may apply.
-        </span>
-      </div>
+    <!-- =========================
+    TRUST CHECK SECTION
+    ========================== -->
 
-      <button type="submit" class="btn-primary large-btn">
-        Get My Cash Offer
-      </button>
-
-      <div class="trust-text">
-        ✔ No commissions or hidden fees<br>
-        ✔ We buy houses as-is<br>
-        ✔ Fast closings on your timeline
-      </div>
-
-    </form>
+    <div class="trust-checks">
+      <div>✔ We will not share your information or send SPAM</div>
+      <div>✔ We use your phone and email for further contact and verification</div>
+      <div>✔ If you enter an incorrect number, we cannot send an offer</div>
+    </div>
 
   </div>
 </section>
@@ -147,6 +137,7 @@ FOOTER (MATCH INDEX)
   }
 </script>
 
+<script src="https://links.summitflowcrm.com/js/form_embed.js"></script>
 <script src="script.js"></script>
 
 </body>
