@@ -740,3 +740,23 @@ html {
   scroll-behavior: smooth;
 }
 
+.footer a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  margin-bottom:8px;
+  opacity:.85;
+  transition:.2s ease;
+}
+
+.footer a:hover{
+  opacity:1;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+  opacity:.75;
+}
+
