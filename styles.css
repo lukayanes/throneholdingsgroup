@@ -724,4 +724,17 @@ RESPONSIVE
   background: var(--gold-dark);
 }
 
+.subheading{
+  margin-top:12px;
+  font-size:20px;
+  color:#6b6b6b;
+}
+
+.section.light{
+  background:var(--light-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
