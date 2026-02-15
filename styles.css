@@ -720,3 +720,8 @@ RESPONSIVE
   position: relative;
 }
 
+.floating-offer .container {
+  max-width: 760px;
+  margin: 0;
+}
+
