@@ -832,77 +832,87 @@ html {
 }
 
 /* ===============================
-   DARK CTA STRIP (THINNER)
+   CTA STRIP (FIXED VERSION)
 ================================ */
 
-.cta-hero {
+.cta-strip {
   position: relative;
   background: url('assets/hero.webp') center/cover no-repeat;
-  padding: 45px 0; /* much thinner */
+  padding: 70px 0; /* thicker but still a strip */
   color: white;
+  overflow: hidden;
 }
 
-.cta-overlay {
+/* Overlay */
+.cta-strip::before {
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(10,42,32,0.90) 0%,
-    rgba(10,42,32,0.80) 50%,
-    rgba(10,42,32,0.65) 100%
+    rgba(10,42,32,0.85),
+    rgba(10,42,32,0.75)
   );
+  z-index: 1;
 }
 
+/* Inner layout */
 .cta-inner {
   position: relative;
   z-index: 2;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
 
+/* Left logo */
+.cta-left {
+  flex: 0 0 auto;
+}
+
 .cta-logo {
-  height: 130px;   /* larger logo */
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
+  width: 240px; /* larger */
+  max-width: 100%;
 }
 
-.cta-text {
+/* Right content */
+.cta-right {
   flex: 1;
-  text-align: right;
 }
 
-.cta-text h2 {
-  font-size: 36px;
+.cta-right h2 {
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
-.cta-text p {
+.cta-right p {
   font-size: 18px;
-  margin: 0;
-  opacity: 0.95;
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
-/* Responsive */
+.cta-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
 
+/* Mobile */
 @media (max-width: 900px) {
   .cta-inner {
     flex-direction: column;
     text-align: center;
-    gap: 25px;
-  }
-
-  .cta-text {
-    text-align: center;
   }
 
   .cta-logo {
-    height: 90px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .cta-points {
+    justify-content: center;
   }
 }
 
