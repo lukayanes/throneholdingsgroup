@@ -1114,3 +1114,12 @@ textarea {
   color:#333;
   line-height:1.9;
 }
+
+/* =========================================
+   TRUST WARNING LINE (RED)
+========================================= */
+
+.warning-text{
+  color:#c62828;
+  font-weight:600;
+}
