@@ -726,9 +726,11 @@ RESPONSIVE
 
 .subheading{
   margin-top:12px;
+  margin-bottom:40px;   /* ← adds space below */
   font-size:20px;
   color:#6b6b6b;
 }
+
 
 .section.light{
   background:var(--light-bg);
