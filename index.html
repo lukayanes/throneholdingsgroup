@@ -205,5 +205,25 @@ FOOTER
   </div>
 </footer>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6XJI1xljjB84anf_s7GMsBqs_03HwdE&libraries=places"></script>
+
+<script>
+function initAutocomplete() {
+  const input = document.getElementById("autocomplete");
+
+  const autocomplete = new google.maps.places.Autocomplete(input, {
+    componentRestrictions: { country: "us" },
+    types: ["address"]
+  });
+
+  autocomplete.addListener("place_changed", function () {
+    const place = autocomplete.getPlace();
+    console.log(place.formatted_address);
+  });
+}
+
+google.maps.event.addDomListener(window, "load", initAutocomplete);
+</script>
+
 </body>
 </html>
