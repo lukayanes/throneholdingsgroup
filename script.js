@@ -125,3 +125,33 @@ document.addEventListener("DOMContentLoaded", function () {
   checkScroll(); // run once on load
 });
 
+// ===============================
+// HERO ADDRESS BAR NAV REPLACEMENT
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hero = document.querySelector(".hero");
+  const floatingBar = document.getElementById("floatingOffer");
+  const nav = document.querySelector(".top-nav");
+
+  if (!hero || !floatingBar || !nav) return;
+
+  function handleScroll() {
+
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > heroBottom - 100) {
+      floatingBar.classList.add("sticky");
+      nav.classList.add("hidden");
+    } else {
+      floatingBar.classList.remove("sticky");
+      nav.classList.remove("hidden");
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+});
+
