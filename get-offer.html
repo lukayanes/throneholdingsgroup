@@ -57,25 +57,8 @@
   </div>
 </footer>
 
-<script>
-function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("show");
-}
+<script src="script.js"></script>
 
-document.getElementById("offerPageForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const btn = document.getElementById("offerPageBtn");
-  const address = document.getElementById("offerAddress").value;
-
-  btn.innerText = "Requesting...";
-  btn.disabled = true;
-
-  setTimeout(() => {
-    window.location.href = "get-your-offer.html?address=" + encodeURIComponent(address);
-  }, 800);
-});
-</script>
 
 </body>
 </html>
