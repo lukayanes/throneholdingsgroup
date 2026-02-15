@@ -411,3 +411,44 @@ body{
     width:100%;
   }
 }
+
+.narrow{
+  max-width:700px;
+}
+
+.lead-form{
+  margin-top:40px;
+}
+
+.lead-form input{
+  width:100%;
+  padding:18px;
+  margin-bottom:20px;
+  border:none;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.two-col{
+  display:flex;
+  gap:20px;
+}
+
+.consent{
+  font-size:14px;
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.large-btn{
+  width:100%;
+  padding:18px;
+  font-size:18px;
+}
+
+.trust-text{
+  margin-top:25px;
+  font-size:14px;
+  line-height:1.6;
+}
