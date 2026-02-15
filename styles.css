@@ -661,22 +661,25 @@ RESPONSIVE
   transition: all 0.35s ease;
 }
 
+/* ===============================
+   STICKY MODE (MATCH SUMMIT)
+================================ */
+
 .floating-offer.sticky {
   position: fixed;
-  top: 18px;                 /* 🔥 slight drop from top like Summit */
-  left: 0;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);  /* 🔥 true horizontal centering */
   width: 100%;
-  display: flex;
-  justify-content: center;   /* 🔥 center the card */
+  max-width: 1100px;            /* Summit width */
   z-index: 2000;
-  background: transparent;   /* remove white full-bleed */
-  box-shadow: none;
+  background: transparent;
+  padding: 0;
 }
 
-/* Card look when sticky */
+/* Make the form fill that width */
 .floating-offer.sticky .floating-offer-form {
-  width: 90%;
-  max-width: 1100px;         /* 🔥 wider like Summit */
+  width: 100%;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
