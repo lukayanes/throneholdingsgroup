@@ -657,25 +657,20 @@ RESPONSIVE
 }
 
 /* ===============================
-   FLOATING ADDRESS BAR
-================================ */
-
-.address-bar-wrapper {
-  position: sticky;
-  top: 100px; /* adjust to match your nav height */
-  z-index: 900;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-}
-
-/* ===============================
-   FLOATING ADDRESS BAR
+   FLOATING ADDRESS BAR (SCROLL ACTIVATED)
 ================================ */
 
 .floating-offer {
+  position: relative;
+  width: 100%;
+  margin-top: -60px; /* slight overlap under nav */
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.floating-offer.fixed {
   position: fixed;
-  top: 88px; /* adjust if nav height differs */
+  top: 88px; /* nav height */
   left: 0;
   right: 0;
   z-index: 9999;
@@ -719,4 +714,3 @@ RESPONSIVE
 .hero-offer-spacer {
   height: 100px;
 }
-
