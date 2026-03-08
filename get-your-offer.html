@@ -80,19 +80,37 @@ INLINE CRM FORM
 
 (function(){
 
-const params = window.location.search;
+const stored = new URLSearchParams();
+
+[
+"gclid",
+"wbraid",
+"gbraid",
+"utm_source",
+"utm_campaign",
+"utm_term",
+"utm_device",
+"utm_adgroup"
+].forEach(function(p){
+
+  const value = localStorage.getItem(p);
+
+  if(value){
+    stored.append(p,value);
+  }
+
+});
 
 const iframe = document.createElement("iframe");
 
 iframe.src =
-"https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh" + params;
+"https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh?" +
+stored.toString();
 
-iframe.style.width = "100%";
-iframe.style.height = "855px";
-iframe.style.border = "none";
-iframe.style.borderRadius = "10px";
-
-iframe.id = "inline-Lga5q77f3hPlvKTEDdBh";
+iframe.style.width="100%";
+iframe.style.height="855px";
+iframe.style.border="none";
+iframe.style.borderRadius="10px";
 
 document.getElementById("ghl-form").appendChild(iframe);
 
