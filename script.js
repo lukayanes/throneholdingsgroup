@@ -203,12 +203,14 @@ params.forEach(function(p){
 
 
 /* =========================================
-INSERT CLICK DATA INTO GHL FORM
+CAPTURE GOOGLE CLICK DATA + POPULATE GHL
 ========================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+(function(){
 
-[
+const params = new URLSearchParams(window.location.search);
+
+const keys = [
 "gclid",
 "wbraid",
 "gbraid",
@@ -217,16 +219,60 @@ document.addEventListener("DOMContentLoaded", function(){
 "utm_term",
 "utm_device",
 "utm_adgroup"
-].forEach(function(p){
+];
 
-  const value = localStorage.getItem(p);
+/* STORE URL PARAMETERS */
 
-  const input = document.querySelector(`[name="${p}"]`);
+keys.forEach(function(k){
 
-  if(value && input){
-    input.value = value;
+  const value = params.get(k);
+
+  if(value){
+    localStorage.setItem(k, value);
   }
 
 });
 
-});
+
+/* MAP URL PARAM → FORM FIELD */
+
+const fieldMap = {
+  gclid: "gclid2",
+  wbraid: "wbraid",
+  gbraid: "gbraid",
+  utm_source: "utm_source",
+  utm_campaign: "utm_campaign",
+  utm_term: "utm_term",
+  utm_device: "utm_device",
+  utm_adgroup: "utm_adgroup"
+};
+
+
+/* POPULATE FIELDS */
+
+function populate(){
+
+  Object.keys(fieldMap).forEach(function(param){
+
+    const stored = localStorage.getItem(param);
+
+    const input = document.querySelector(`[name="${fieldMap[param]}"]`);
+
+    if(stored && input){
+      input.value = stored;
+    }
+
+  });
+
+}
+
+
+/* RUN MULTIPLE TIMES (GHL loads forms late) */
+
+document.addEventListener("DOMContentLoaded", populate);
+
+setTimeout(populate, 500);
+setTimeout(populate, 1500);
+setTimeout(populate, 3000);
+
+})();
