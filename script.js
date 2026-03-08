@@ -80,10 +80,17 @@ document.addEventListener("DOMContentLoaded", function () {
       offerBtn.disabled = true;
 
       setTimeout(() => {
-        window.location.href =
-          "get-your-offer.html?address=" +
-          encodeURIComponent(address);
-      }, 800);
+
+  const encoded = encodeURIComponent(address);
+
+  const query = window.location.search
+    ? "&" + window.location.search.substring(1)
+    : "";
+
+  window.location.href =
+    "get-your-offer.html?address=" + encoded + query;
+
+}, 800);
     });
   }
 
