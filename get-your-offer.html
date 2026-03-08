@@ -71,28 +71,38 @@ OFFER COMPLETION SECTION
     <!-- Hidden Address Field -->
     <input type="hidden" id="addressField" name="address">
 
-    <!-- =========================
-    INLINE CRM FORM
-    ========================== -->
-    <div class="form-embed">
+   <!-- =========================
+INLINE CRM FORM
+========================== -->
+<div class="form-embed" id="ghl-form"></div>
 
-      <iframe
-        src="https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh"
-        style="width:100%;height:855px;border:none;border-radius:10px"
-        id="inline-Lga5q77f3hPlvKTEDdBh" 
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-activation-type="alwaysActivated"
-        data-deactivation-type="neverDeactivate"
-        data-form-name="PPC / Website"
-        data-height="855"
-        data-layout-iframe-id="inline-Lga5q77f3hPlvKTEDdBh"
-        data-form-id="Lga5q77f3hPlvKTEDdBh"
-        title="PPC / Website">
-      </iframe>
+<script>
 
-    </div>
+(function(){
 
+const params = window.location.search;
+
+const iframe = document.createElement("iframe");
+
+iframe.src =
+"https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh" + params;
+
+iframe.style.width = "100%";
+iframe.style.height = "855px";
+iframe.style.border = "none";
+iframe.style.borderRadius = "10px";
+
+iframe.id = "inline-Lga5q77f3hPlvKTEDdBh";
+
+document.getElementById("ghl-form").appendChild(iframe);
+
+})();
+
+</script>
+
+<script src="https://links.summitflowcrm.com/js/form_embed.js"></script>
+
+  
     <!-- =========================
     TRUST CHECK SECTION
     ========================== -->
