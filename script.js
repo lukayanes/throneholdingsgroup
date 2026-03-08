@@ -305,3 +305,24 @@ setTimeout(populate, 1500);
 setTimeout(populate, 3000);
 
 })();
+
+
+// Populate address field from URL
+document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const address = params.get("address");
+
+  if (!address) return;
+
+  const decoded = decodeURIComponent(address);
+
+  const field =
+    document.querySelector('[name="address"]') ||
+    document.querySelector("#offerAddress");
+
+  if (field) {
+    field.value = decoded;
+  }
+
+});
