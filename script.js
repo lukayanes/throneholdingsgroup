@@ -326,3 +326,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+/* =========================================
+POPULATE ADDRESS INTO GHL FORM
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const params = new URLSearchParams(window.location.search);
+  const address = params.get("address");
+
+  if(!address) return;
+
+  const decoded = decodeURIComponent(address);
+
+  // Find the GHL address field
+  const field = document.querySelector('[name="address"]');
+
+  if(field){
+    field.value = decoded;
+    console.log("Address inserted:", decoded);
+  }
+
+});
