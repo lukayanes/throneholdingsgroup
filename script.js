@@ -43,9 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.disabled = true;
 
     setTimeout(function(){
-      const encoded = encodeURIComponent(selectedAddress);
-      window.location.href = "/get-your-offer.html?address=" + encoded;
-    }, 1200);
+
+  const encoded = encodeURIComponent(selectedAddress);
+
+  const params = new URLSearchParams();
+
+  [
+    "gclid",
+    "wbraid",
+    "gbraid",
+    "utm_source",
+    "utm_campaign",
+    "utm_term",
+    "utm_device",
+    "utm_adgroup"
+  ].forEach(p => {
+
+    const v = localStorage.getItem(p);
+    if (v) params.append(p, v);
+
+  });
+
+  window.location.href =
+    "/get-your-offer.html?address=" + encoded + "&" + params.toString();
+
+}, 1200);
 
   });
 
