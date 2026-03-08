@@ -80,7 +80,7 @@ INLINE CRM FORM
 
 (function(){
 
-const stored = new URLSearchParams();
+const stored = new URLSearchParams(window.location.search);
 
 [
 "gclid",
@@ -96,7 +96,7 @@ const stored = new URLSearchParams();
   const value = localStorage.getItem(p);
 
   if(value){
-    stored.append(p,value);
+    stored.set(p,value);
   }
 
 });
