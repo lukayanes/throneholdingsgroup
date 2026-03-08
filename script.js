@@ -166,3 +166,67 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* =========================================
+CAPTURE GOOGLE ADS CLICK DATA
+========================================= */
+
+(function(){
+
+function getParam(p){
+  const url = new URL(window.location.href);
+  return url.searchParams.get(p);
+}
+
+const params = [
+  "gclid",
+  "wbraid",
+  "gbraid",
+  "utm_source",
+  "utm_campaign",
+  "utm_term",
+  "utm_device",
+  "utm_adgroup"
+];
+
+params.forEach(function(p){
+
+  const value = getParam(p);
+
+  if(value){
+    localStorage.setItem(p, value);
+  }
+
+});
+
+})();
+
+
+
+/* =========================================
+INSERT CLICK DATA INTO GHL FORM
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+[
+"gclid",
+"wbraid",
+"gbraid",
+"utm_source",
+"utm_campaign",
+"utm_term",
+"utm_device",
+"utm_adgroup"
+].forEach(function(p){
+
+  const value = localStorage.getItem(p);
+
+  const input = document.querySelector(`[name="${p}"]`);
+
+  if(value && input){
+    input.value = value;
+  }
+
+});
+
+});
