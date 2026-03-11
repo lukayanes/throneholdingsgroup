@@ -349,3 +349,26 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 });
+
+
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+contactForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+localStorage.setItem("firstName", document.getElementById("firstName").value);
+localStorage.setItem("lastName", document.getElementById("lastName").value);
+localStorage.setItem("email", document.getElementById("email").value);
+localStorage.setItem("phone", document.getElementById("phone").value);
+
+const params = new URLSearchParams(window.location.search);
+
+window.location.href =
+"property-details.html?" + params.toString();
+
+});
+
+}
