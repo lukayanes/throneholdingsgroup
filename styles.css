@@ -430,6 +430,10 @@ body{
   gap:20px;
 }
 
+.two-col input{
+  width:50%;
+}
+
 .consent{
   font-size:14px;
   display:flex;
