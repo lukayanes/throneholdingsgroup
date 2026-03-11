@@ -163,28 +163,34 @@ FOOTER (MATCH INDEX)
 <script src="script.js"></script>
 
 <script>
-const phoneInput = document.getElementById("phoneField");
+document.addEventListener("DOMContentLoaded", function(){
 
-phoneInput.addEventListener("input", function(e){
+  const phoneInput = document.getElementById("phone");
+  if(!phoneInput) return;
 
-  let numbers = e.target.value.replace(/\D/g, "");
+  phoneInput.addEventListener("input", function(e){
 
-  if(numbers.length > 10){
-    numbers = numbers.substring(0,10);
-  }
+    let numbers = e.target.value.replace(/\D/g, "");
 
-  let formatted = numbers;
+    if(numbers.length > 10){
+      numbers = numbers.substring(0,10);
+    }
 
-  if(numbers.length > 6){
-    formatted = `(${numbers.slice(0,3)}) ${numbers.slice(3,6)}-${numbers.slice(6)}`;
-  }
-  else if(numbers.length > 3){
-    formatted = `(${numbers.slice(0,3)}) ${numbers.slice(3)}`;
-  }
+    let formatted = numbers;
 
-  e.target.value = formatted;
+    if(numbers.length > 6){
+      formatted = `(${numbers.slice(0,3)}) ${numbers.slice(3,6)}-${numbers.slice(6)}`;
+    }
+    else if(numbers.length > 3){
+      formatted = `(${numbers.slice(0,3)}) ${numbers.slice(3)}`;
+    }
+
+    e.target.value = formatted;
+
+  });
 
 });
 </script>
+  
 </body>
 </html>
