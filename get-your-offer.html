@@ -74,33 +74,49 @@ OFFER COMPLETION SECTION
    <!-- =========================
 INLINE CRM FORM
 ========================== -->
-<form id="contactForm" class="offer-contact-form">
+<form class="lead-form">
 
-<div class="name-row">
-<input type="text" id="firstName" placeholder="First Name" required>
-<input type="text" id="lastName" placeholder="Last Name" required>
-</div>
+  <div class="two-col">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+  </div>
 
-<input type="email" id="email" placeholder="Email Address" required>
+  <input type="email" name="email" placeholder="Email Address" required>
 
-<input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
 
-<button type="submit" class="btn-primary">Get My Offer</button>
+
+  <label class="consent">
+    <input type="checkbox" required>
+
+    By checking this box, I consent to receive transactional messages related to my account, offers, or services I have requested from <strong>Throne Holdings Group LLC</strong>. These messages may include appointment reminders, offer updates, and account notifications among others. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
+  </label>
+
+
+  <button type="submit" class="large-btn">
+    Get My Offer
+  </button>
+
+
+  <div class="trust-text">
+
+    ✓ We will not share your information or send SPAM
+
+    <br>
+
+    ✓ We use your phone and email for further contact and verification
+
+    <br>
+
+    <span class="warning-text">
+      ✕ If you enter an incorrect number, we cannot send an offer
+    </span>
+
+  </div>
 
 </form>
   
-    <!-- =========================
-    TRUST CHECK SECTION
-    ========================== -->
 
-    <div class="trust-checks">
-      <div>✔ We will not share your information or send SPAM</div>
-      <div>✔ We use your phone and email for further contact and verification</div>
-      <div class="warning-text">✔ If you enter an incorrect number, we cannot send an offer</div>
-    </div>
-
-  </div>
-</section>
 
 <!-- =========================
 FOOTER (MATCH INDEX)
