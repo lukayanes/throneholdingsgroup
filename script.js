@@ -415,7 +415,7 @@ localStorage.setItem("phone", document.getElementById("phone").value);
 const params = new URLSearchParams(window.location.search);
 
 window.location.href =
-"property-details.html?" + params.toString();
+"get-your-offer-send.html?" + params.toString();
 
 });
 
