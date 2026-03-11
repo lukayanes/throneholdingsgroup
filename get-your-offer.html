@@ -74,52 +74,20 @@ OFFER COMPLETION SECTION
    <!-- =========================
 INLINE CRM FORM
 ========================== -->
-<div class="form-embed" id="ghl-form"></div>
+<form id="contactForm" class="offer-contact-form">
 
-<script>
+<div class="name-row">
+<input type="text" id="firstName" placeholder="First Name" required>
+<input type="text" id="lastName" placeholder="Last Name" required>
+</div>
 
-(function(){
+<input type="email" id="email" placeholder="Email Address" required>
 
-const stored = new URLSearchParams(window.location.search);
+<input type="tel" id="phone" placeholder="Phone Number" required>
 
-[
-"gclid",
-"wbraid",
-"gbraid",
-"utm_source",
-"utm_campaign",
-"utm_term",
-"utm_device",
-"utm_adgroup"
-].forEach(function(p){
+<button type="submit" class="btn-primary">Get My Offer</button>
 
-  const value = localStorage.getItem(p);
-
-  if(value){
-    stored.set(p,value);
-  }
-
-});
-
-const iframe = document.createElement("iframe");
-
-iframe.src =
-"https://links.summitflowcrm.com/widget/form/Lga5q77f3hPlvKTEDdBh?" +
-stored.toString();
-
-iframe.style.width="100%";
-iframe.style.height="855px";
-iframe.style.border="none";
-iframe.style.borderRadius="10px";
-
-document.getElementById("ghl-form").appendChild(iframe);
-
-})();
-
-</script>
-
-<script src="https://links.summitflowcrm.com/js/form_embed.js"></script>
-
+</form>
   
     <!-- =========================
     TRUST CHECK SECTION
@@ -180,6 +148,8 @@ FOOTER (MATCH INDEX)
   }
 </script>
 
+
+  
 <script src="https://links.summitflowcrm.com/js/form_embed.js"></script>
 <script src="script.js"></script>
 
