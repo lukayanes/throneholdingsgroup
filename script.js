@@ -5,6 +5,7 @@
 let selectedAddress = "";
 
 function initAutocomplete() {
+
   const input = document.getElementById("autocomplete");
   if (!input) return;
 
@@ -15,60 +16,59 @@ function initAutocomplete() {
 
   autocomplete.addListener("place_changed", function () {
 
-  const place = autocomplete.getPlace();
+    const place = autocomplete.getPlace();
 
-  let street = "";
-  let city = "";
-  let state = "";
-  let postal = "";
-  let country = "";
+    let street = "";
+    let city = "";
+    let state = "";
+    let postal = "";
+    let country = "";
 
-  place.address_components.forEach(component => {
+    place.address_components.forEach(component => {
 
-    const types = component.types;
+      const types = component.types;
 
-    if(types.includes("street_number")){
-      street = component.long_name + " " + street;
-    }
+      if(types.includes("street_number")){
+        street = component.long_name + " " + street;
+      }
 
-    if(types.includes("route")){
-      street += component.long_name;
-    }
+      if(types.includes("route")){
+        street += component.long_name;
+      }
 
-    if(types.includes("locality")){
-      city = component.long_name;
-    }
+      if(types.includes("locality")){
+        city = component.long_name;
+      }
 
-    if(types.includes("administrative_area_level_1")){
-      state = component.short_name;
-    }
+      if(types.includes("administrative_area_level_1")){
+        state = component.short_name;
+      }
 
-    if(types.includes("postal_code")){
-      postal = component.long_name;
-    }
+      if(types.includes("postal_code")){
+        postal = component.long_name;
+      }
 
-    if(types.includes("country")){
-      country = component.long_name;
-    }
+      if(types.includes("country")){
+        country = component.long_name;
+      }
+
+    });
+
+    selectedAddress = place.formatted_address;
+
+    localStorage.setItem("addressStreet", street);
+    localStorage.setItem("addressCity", city);
+    localStorage.setItem("addressState", state);
+    localStorage.setItem("addressPostal", postal);
+    localStorage.setItem("addressCountry", country);
+
+    localStorage.setItem("address", place.formatted_address);
 
   });
 
-  selectedAddress = place.formatted_address;
-
-  /* STORE INDIVIDUAL COMPONENTS */
-
-  localStorage.setItem("addressStreet", street);
-  localStorage.setItem("addressCity", city);
-  localStorage.setItem("addressState", state);
-  localStorage.setItem("addressPostal", postal);
-  localStorage.setItem("addressCountry", country);
-
-  localStorage.setItem("address", place.formatted_address);
-
-});
+}
 
 window.initAutocomplete = initAutocomplete;
-
 // ===============================
 // FORM SUBMIT LOADING + REDIRECT
 // ===============================
