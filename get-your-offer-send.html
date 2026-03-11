@@ -82,6 +82,12 @@ INLINE CRM FORM
 
 const stored = new URLSearchParams(window.location.search);
 
+stored.set("firstName", localStorage.getItem("firstName") || "");
+stored.set("lastName", localStorage.getItem("lastName") || "");
+stored.set("email", localStorage.getItem("email") || "");
+stored.set("phone", localStorage.getItem("phone") || "");
+stored.set("address", localStorage.getItem("address") || "");
+
 [
 "gclid",
 "wbraid",
